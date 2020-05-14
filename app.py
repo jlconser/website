@@ -7,7 +7,12 @@ def home():
 
 @app.route('/projects/')
 def projects():
-    return render_template('projects.html')
+    project_list = [dict()]
+    project_list[0]["title"] = "Testy_test"
+    project_list[0]["subtitle"] = "Testy testy"
+    project_list[0]["description"] = "This is a test"
+    project_list[0]["imgsrc"] = "../static/jesse.jpg"
+    return render_template('projects.html', projects=project_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
