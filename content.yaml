@@ -1,0 +1,5 @@
+projects:
+  - title: "WHOA"
+    subtitle: "Testy testy"
+    description: "This is a test"
+    imgsrc: "../static/jesse.jpg"

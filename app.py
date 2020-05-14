@@ -1,5 +1,11 @@
 from flask import Flask, render_template
+import yaml
 app = Flask(__name__)
+
+#Load content
+with open("./content.yaml") as file:
+    content = yaml.full_load(file)
+    project_list = content['projects']
 
 @app.route('/')
 def home():
@@ -7,11 +13,6 @@ def home():
 
 @app.route('/projects/')
 def projects():
-    project_list = [dict()]
-    project_list[0]["title"] = "Testy_test"
-    project_list[0]["subtitle"] = "Testy testy"
-    project_list[0]["description"] = "This is a test"
-    project_list[0]["imgsrc"] = "../static/jesse.jpg"
     return render_template('projects.html', projects=project_list)
 
 if __name__ == '__main__':
