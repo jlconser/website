@@ -1,5 +1,8 @@
 projects:
-  - title: "WHOA"
-    subtitle: "Testy testy"
-    description: "This is a test"
+  - title: "This Website"
+    description: >
+      This website was developed as a personal project right
+      after I graduated UC Berkeley in May 2020.
+      It is built using Flask and Jinja2 templating.
+    link: "https://github.com/jlconser/website/"
     imgsrc: "../static/jesse.jpg"
